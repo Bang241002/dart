@@ -1,4 +1,4 @@
-void getAllEmployees() {
+void getAllEmployee() {
     var employees;
     for (var employee in employees) {
       print('ID: ${employee.id}');
