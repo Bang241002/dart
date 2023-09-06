@@ -1,19 +1,19 @@
+
 import 'Employee.dart';
-import 'addNewEmployee.dart';
-import 'getAllEmployee.dart';
 
 void main() {
-  var name = Employee(1, 'dinh cong bang', "24-02-2003" , "0988812345");
 
-    print(name.Fullname);
-    print(name.Birthday);
-    print(name.PhoneNumber);
+  // Thêm nhân viên mới
+  Employee employee = Employee(1, 'dinh cong bang', DateTime(2003, 24, 2), '123 Elm St', '0945212345');
+  employee.addNewEmployee(employee);
 
-  var yourname = Employee(2, 'cong bang', "24-03-2003" , "0999912345");
-    print(yourname.Fullname);
-    print(yourname.Birthday);
-    print(yourname.PhoneNumber);
+  // Lấy toàn bộ nhân viên
+  List<Employee> getAllEmployee = employee.getAllEmployee();
+  print('Danh sách tất cả nhân viên:');
+  print(getAllEmployee);
 
-
+  // Cập nhật nhân viên
+  Employee updatedEmployee = Employee(2, 'dinh cong bang', DateTime(2003, 24, 2), '123 Elm St', '0945212345');
+  employee.updateEmployee( updatedEmployee as String);
 
 }

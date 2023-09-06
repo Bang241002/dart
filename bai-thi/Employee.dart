@@ -1,14 +1,23 @@
 class Employee{
   late int id;
   late String Fullname  ;
-  late String Birthday  ;
-  late String PhoneNumber  ;
+  late DateTime Birthday  ;
+  late String Address;
+  late String PhoneNumber ;
 
-  Employee (int id, String Fullname, String Birthday, String PhoneNumber){
+  Employee(id, FullName, Birthday, Address,phoneNumber){
     this.id = id;
     this.Fullname = Fullname ;
     this.Birthday = Birthday;
+    this.Address = Address;
     this.PhoneNumber = PhoneNumber;
   }
 
+  void addNewEmployee(Employee newEmployee) {}
+
+  void getAllEmployee() {}
+
+  void updateEmployee(String string) {}
+
+  
 }
