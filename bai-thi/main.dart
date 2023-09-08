@@ -12,21 +12,22 @@ void main() {
     print("1. Add New Employee");
     print("2. Get All Employees");
     print("3. Update Employee");
-    print("5. Exit");
+    print("4. Exit");
     stdout.write("Enter your choice (1/2/3/4): ");
     var choice = stdin.readLineSync();
 
     switch (choice) {
       case '1':
-      print("id");
-      int id = stdin.readLineSync() as int;
-      print("fullname");
+      print("id :");
+      var idString = stdin.readLineSync();
+      int id = int.parse(idString.toString());
+      print("fullname :");
       var fullName = stdin.readLineSync();
-      print("birthday");
+      print("birthday :");
       var birthday = stdin.readLineSync();
-      print("address");
+      print("address :");
       var address = stdin.readLineSync();
-      print("phoneNumber");
+      print("phoneNumber :");
       var phoneNumber = stdin.readLineSync();
       Employee employee = Employee(id, fullName, birthday, address, phoneNumber);
         employeeManagement.addNewEmployee(employee);
@@ -35,15 +36,16 @@ void main() {
         employeeManagement.getAllEmployee();
         break;
       case '3':
-      print("Enter the Employee ID to update: ");
-        int id = stdin.readLineSync() as int;
-      print("fullname");
+      print("id :");
+        var idString = stdin.readLineSync();
+        int id = int.parse(idString.toString());
+      print("fullname :");
         var fullname = stdin.readLineSync();  
-      print("birthday");
+      print("birthday :");
         var birthday = stdin.readLineSync();
-      print("address");   
+      print("address :");   
         var address = stdin.readLineSync();
-      print("PhoneNumber");
+      print("PhoneNumber :");
         var phoneNumber = stdin.readLineSync();  
       Employee employee = Employee(id, fullname, birthday, address , phoneNumber); 
         employeeManagement.updateEmployee( id, employee);

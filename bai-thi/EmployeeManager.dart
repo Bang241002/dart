@@ -1,20 +1,19 @@
 import 'Employee.dart';
 
 class Employeemanager {
+List<Employee> employees = [];
 
 void addNewEmployee(Employee employee) {
-    var employees;
-    employees.add(employee);
+    employee.addNewEmployee(employee);
 }
 
 void getAllEmployee() {
-    var employees;
     for (var employee in employees) {
       print('ID: ${employee.id}');
-      print('Full Name: ${employee.Fullname}');
-      print('Date of Birth: ${employee.Birthday}');
-      print('Address: ${employee.Address}');
-      print('Phone Number: ${employee.PhoneNumber}');
+      print('Full Name: ${employee.fullName}');
+      print('Date of Birth: ${employee.birthDay}');
+      print('Address: ${employee.address}');
+      print('Phone Number: ${employee.phoneNumber}');
       print('-------------------------');
   }
 }

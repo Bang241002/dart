@@ -1,17 +1,18 @@
 class Employee{
   late int id;
-  late String Fullname  ;
-  late DateTime Birthday  ;
-  late String Address;
-  late String PhoneNumber ;
+  late String fullName  ;
+  late String birthDay  ;
+  late String address;
+  late String phoneNumber ;
 
-  Employee(id, FullName, Birthday, Address,phoneNumber){
+  Employee(id, fullName, birthDay, address,phoneNumber){
     this.id = id;
-    this.Fullname = Fullname ;
-    this.Birthday = Birthday;
-    this.Address = Address;
-    this.PhoneNumber = PhoneNumber;
+    this.fullName = fullName ;
+    this.birthDay = birthDay;
+    this.address = address;
+    this.phoneNumber = phoneNumber;
   }
 
+  void addNewEmployee(Employee employee) {}
   
 }
