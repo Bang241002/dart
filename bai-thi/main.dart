@@ -1,21 +1,57 @@
+import 'dart:io';
+
 import 'Employee.dart';
+import 'EmployeeManager.dart';
 
 void main() {
-  // Thêm nhân viên mới
-  Employee employee = Employee(1, 'dinh cong bang', DateTime(2003, 24, 2), '123 Elm St', '0945212345');
-  employee.addNewEmployee(employee);
-  print(employee.Fullname);
-  print(employee.Birthday);
-  print(employee.Address);
-  print(employee.PhoneNumber);
 
-  // Lấy toàn bộ nhân viên
-  List<Employee> getAllEmployee = employee.getAllEmployee();
-  print('Danh sách tất cả nhân viên:');
-  print(getAllEmployee);
+  Employeemanager employeeManagement = Employeemanager();
 
-  // Cập nhật nhân viên
-  Employee updatedEmployee = Employee(2, 'dinh cong bang', DateTime(2003, 24, 2), '123 Elm St', '0945212345');
-  employee.updateEmployee( updatedEmployee as String);
+  while (true) {
+    print("Menu:");
+    print("1. Add New Employee");
+    print("2. Get All Employees");
+    print("3. Update Employee");
+    print("5. Exit");
+    stdout.write("Enter your choice (1/2/3/4): ");
+    var choice = stdin.readLineSync();
 
+    switch (choice) {
+      case '1':
+      print("id");
+      int id = stdin.readLineSync() as int;
+      print("fullname");
+      var fullName = stdin.readLineSync();
+      print("birthday");
+      var birthday = stdin.readLineSync();
+      print("address");
+      var address = stdin.readLineSync();
+      print("phoneNumber");
+      var phoneNumber = stdin.readLineSync();
+      Employee employee = Employee(id, fullName, birthday, address, phoneNumber);
+        employeeManagement.addNewEmployee(employee);
+        break;
+      case '2':
+        employeeManagement.getAllEmployee();
+        break;
+      case '3':
+      print("Enter the Employee ID to update: ");
+        int id = stdin.readLineSync() as int;
+      print("fullname");
+        var fullname = stdin.readLineSync();  
+      print("birthday");
+        var birthday = stdin.readLineSync();
+      print("address");   
+        var address = stdin.readLineSync();
+      print("PhoneNumber");
+        var phoneNumber = stdin.readLineSync();  
+      Employee employee = Employee(id, fullname, birthday, address , phoneNumber); 
+        employeeManagement.updateEmployee( id, employee);
+        break;
+      case '4':
+        exit(0);
+      default:
+        print("Invalid choice. Please select a valid option.");
+    }
+  }
 }

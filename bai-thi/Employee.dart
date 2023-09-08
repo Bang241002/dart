@@ -13,11 +13,5 @@ class Employee{
     this.PhoneNumber = PhoneNumber;
   }
 
-  void addNewEmployee(Employee newEmployee) {}
-
-  void getAllEmployee() {}
-
-  void updateEmployee(String string) {}
-
   
 }
